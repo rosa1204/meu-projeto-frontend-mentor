@@ -1,0 +1,124 @@
+html
+
+<body>
+    
+        <div class="card">
+          <img src="imagen/img2/img.jpg" 
+          alt="img.jpg">
+          <p class="learning">Learning</p>
+          <p class="date">Published 21 dec 2023</p>
+          <h1> <a href="#">HTML & CSS foundations</a></h1>
+          <p class="description">These languages are the backbone of every website,
+              defining structure, content, and presentation.</p>
+  
+          <div class="author">
+              <img src="avatar.webp" alt="avatar.webp">
+              <p class="name">Greg Hooper</p>
+          </div>
+        </div>
+  </body>
+</html>
+
+css 
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing:0;
+}
+ body {
+    background-color: hsl(47, 88%, 63%);
+    min-height:100vh;
+    font-family: "figtree", sans-serif;
+    display: grid;
+    place-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+ }
+  img {
+   width:80%;
+  }
+ 
+ .card {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 300px;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: 1rem;
+    outline: 1px solid black;
+    display: block;
+
+ }
+ .card :before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 15);
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-radius: 20px ;
+    z-index: -1;
+    
+ }
+ .card img {
+    border-radius: 1rem;
+    width:100%;
+    display: block;
+    
+ }
+ .learning {
+    background-color:hsl(47, 88%, 63%);
+    width:80px;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: 800;
+    border-radius: 5px;
+ }
+ .card .date {
+   margin-top: 15px;
+   
+ }
+ .card h1{
+   margin: 10px;
+   color: rgb(105, 89, 89);
+ }
+ .card h1 a {
+   color: black;
+   font-size: 20px;
+   font-weight: 800;
+   line-height: 1;
+   text-decoration: none;
+   width: 200px;
+ }
+.card h1 a:hover{
+   color: rgb(255, 0, 0);
+}
+.description {
+color: gray;
+font-weight: 500; 
+}
+
+ .author {
+   width: 70px;
+   border-radius: 100%;
+   margin-top: 20px;  
+}
+.name {
+   width: 150px;
+   color: black;
+   font-weight: 800;
+   margin-left: 100px;
+   margin-top: -40px;
+}
+
+
+@media (max-width: 375px) {
+   .card h1 a {
+      font-size: 1.25rem;
+   }
+}
+
+
